@@ -192,12 +192,7 @@
                             "name":"slot_sticky",
                             "value":"true"
                         }
-                    ],
-                    "slotConfigNames":{
-                        "appSettingNames": [
-                            "slot_sticky"
-                        ]
-                    }
+                    ]
                 }
             }
         },
@@ -250,9 +245,24 @@
                         {
                             "name": "WEBSITE_RUN_FROM_PACKAGE",
                             "value": "1"
+                        },
+                                                {
+                            "name":"slot_sticky",
+                            "value":"false"
                         }
                     ]
                 }
+            }
+        },
+        {
+            "type": "Microsoft.Web/sites/config",
+            "apiVersion": "2022-09-01",
+            "name": "slotconfignames",
+            "dependsOn": [
+                 "[resourceId('Microsoft.Web/sites', parameters('functionAppName'))]"
+            ],
+            "properties": {
+                "appSettingNames": [ "slot_sticky" ]
             }
         },
         {
