@@ -257,7 +257,7 @@
         {
             "type": "Microsoft.Web/sites/config",
             "apiVersion": "2022-09-01",
-            "name": "slotconfignames",
+            "name": "slotConfigNames",
             "dependsOn": [
                  "[resourceId('Microsoft.Web/sites', parameters('functionAppName'))]"
             ],
